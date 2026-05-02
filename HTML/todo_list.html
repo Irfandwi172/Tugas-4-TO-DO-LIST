@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="profile">
+          <div class="profile-name">Budi Santoso</div>
+          <div class="profile-role">Software Developer</div>
+        </div>
+        <div class="time">
+          <div id="hari"></div>
+          <div id="tanggal"></div>
+        </div>
+      </div>
+      <div class="card">
+        <label>Tulis tugas baru:</label>
+        <textarea
+          id="task-input"
+          placeholder="Contoh: Belajar JavaScript..."
+        ></textarea>
+
+        <label>Level prioritas:</label>
+        <div class="priority-row">
+          <button
+            class="priority-btn active-low"
+            id="btn-low"
+            onclick="setPriority('low')"
+          >
+            Low
+          </button>
+          <button
+            class="priority-btn"
+            id="btn-medium"
+            onclick="setPriority('medium')"
+          >
+            Medium
+          </button>
+          <button
+            class="priority-btn"
+            id="btn-high"
+            onclick="setPriority('high')"
+          >
+            High
+          </button>
+        </div>
+
+        <button class="btn-submit" onclick="addTask()">+ Submit Tugas</button>
+      </div>
+      <div class="card">
+        <div class="section-title">To Do</div>
+        <div id="todo-list">
+          <p class="empty-msg">Belum ada tugas.</p>
+        </div>
+        <button class="btn-delete-all" onclick="deleteAll()">
+          Hapus Semua To Do
+        </button>
+      </div>
+      <div class="card">
+        <div class="section-title">Done</div>
+        <div id="done-list">
+          <p class="empty-msg">Belum ada tugas selesai.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/JS/script.js"></script>
+  </body>
+</html>

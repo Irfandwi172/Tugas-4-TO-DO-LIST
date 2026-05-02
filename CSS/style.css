@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #193542;
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.header {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.profile-role {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.time {
+  text-align: right;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  resize: none;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #333;
+  background-color: #f9f9f9;
+  margin-bottom: 12px;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #4a90d9;
+  background-color: #fff;
+}
+
+.priority-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.priority-btn {
+  flex: 1;
+  padding: 7px 0;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.priority-btn:hover {
+  background-color: #e8e8e8;
+}
+
+.active-low {
+  background-color: #e6f4d7;
+  color: #3a7d11;
+  border-color: #7db83a;
+}
+
+.active-medium {
+  background-color: #fff3e0;
+  color: #a05f00;
+  border-color: #f0a030;
+}
+
+.active-high {
+  background-color: #fdecea;
+  color: #b71c1c;
+  border-color: #e53935;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #193542;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #357abd;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.todo-content {
+  flex: 1;
+}
+
+.todo-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.todo-text.done {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-meta {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 3px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.badge-low    { background-color: #e6f4d7; color: #3a7d11; }
+.badge-medium { background-color: #fff3e0; color: #a05f00; }
+.badge-high   { background-color: #fdecea; color: #b71c1c; }
+
+.btn-delete-item {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0 4px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.btn-delete-item:hover {
+  color: #e53935;
+}
+
+.done-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #aaa;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: line-through;
+}
+
+.done-item:last-child {
+  border-bottom: none;
+}
+
+.done-icon {
+  color: #7db83a;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.done-item .badge {
+  margin-left: auto;
+}
+
+.btn-delete-all {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #fff;
+  color: #e53935;
+  border: 1px solid #e53935;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-delete-all:hover {
+  background-color: #fdecea;
+}
+
+.empty-msg {
+  font-size: 13px;
+  color: #bbb;
+  text-align: center;
+  padding: 12px 0;
+}
